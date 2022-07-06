@@ -49,6 +49,7 @@ const navLinkStyles = ({isActive}) => {
           <li><NavLink style={navLinkStyles} to="/">Home</NavLink></li>
           <li><NavLink style={navLinkStyles} to="/user-login">UserLogin</NavLink></li>
           <li><NavLink style={navLinkStyles} to="/user-sign-up">UserSignUp</NavLink></li>
+          <li><NavLink style={navLinkStyles} to="/user-request-item">UserRequestItem</NavLink></li>
           {/* <li><NavLink style={navLinkStyles} to="/admin-login">AdminLogin</NavLink></li> */}
         </ul>
       </nav>

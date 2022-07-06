@@ -15,6 +15,7 @@ function UserSignUpForm() {
           <input type="text" />
           <label htmlFor='telephone'>Telephone</label>
           <input type="email" />
+          <button>UserSignUp</button>
         </form>
         </>
     )
