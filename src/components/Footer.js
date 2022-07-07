@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Container, Column, FooterLink, Heading } from "../styles/FooterStyles.js";
+import {
+  Container,
+  Column,
+  FooterLink,
+  Heading,
+} from '../styles/FooterStyles.js'
 
 const Footer = () => {
   return (
@@ -18,21 +23,21 @@ const Footer = () => {
         <Heading>Social Media</Heading>
         <FooterLink href="#">
           <i className="fab fa-facebook-f">
-            <span style={{ marginLeft: "10px" }}>Facebook</span>
+            <span style={{ marginLeft: '10px' }}>Facebook</span>
           </i>
         </FooterLink>
         <FooterLink href="#">
           <i className="fab fa-instagram">
-            <span style={{ marginLeft: "10px" }}>Instagram</span>
+            <span style={{ marginLeft: '10px' }}>Instagram</span>
           </i>
         </FooterLink>
         <FooterLink href="#">
           <i className="fab fa-twitter">
-            <span style={{ marginLeft: "10px" }}>Twitter</span>
+            <span style={{ marginLeft: '10px' }}>Twitter</span>
           </i>
         </FooterLink>
       </Column>
     </Container>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer

@@ -1,16 +1,17 @@
-// Navbar.js
-import { useState } from "react";
-import { NavLink } from 'react-router-dom'
 import "../styles/navbar.css";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+// Navbar.js
 
 export default function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
 
-const navLinkStyles = ({isActive}) => {
-  return {
-    fontWeight: isActive ? 'bold' : 'normal'
-}
-}
+  const navLinkStyles = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? 'bold' : 'normal',
+    }
+  }
   return (
     <nav className="navigation">
       <a href="/" className="brand-name">
@@ -19,7 +20,7 @@ const navLinkStyles = ({isActive}) => {
       <button
         className="hamburger"
         onClick={() => {
-          setIsNavExpanded(!isNavExpanded);
+          setIsNavExpanded(!isNavExpanded)
         }}
       >
         {/* hamburger svg code... */}
@@ -39,21 +40,35 @@ const navLinkStyles = ({isActive}) => {
       </button>
       <div
         className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+          isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
         }
       >
-       
-
-<nav>
-        <ul>
-          <li><NavLink style={navLinkStyles} to="/">Home</NavLink></li>
-          <li><NavLink style={navLinkStyles} to="/user-login">UserLogin</NavLink></li>
-          <li><NavLink style={navLinkStyles} to="/user-sign-up">UserSignUp</NavLink></li>
-          <li><NavLink style={navLinkStyles} to="/user-request-item">UserRequestItem</NavLink></li>
-          {/* <li><NavLink style={navLinkStyles} to="/admin-login">AdminLogin</NavLink></li> */}
-        </ul>
-      </nav>
+        <nav>
+          <ul>
+            <li>
+              <NavLink style={navLinkStyles} to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/user-login">
+                UserLogin
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/user-sign-up">
+                UserSignUp
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/user-request-item">
+                UserRequestItem
+              </NavLink>
+            </li>
+            {/* <li><NavLink style={navLinkStyles} to="/admin-login">AdminLogin</NavLink></li> */}
+          </ul>
+        </nav>
       </div>
     </nav>
-  );
+  )
 }

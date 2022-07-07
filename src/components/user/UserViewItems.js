@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function UserViewItems() {
-  return (
-    <div>UserViewItems</div>
-  )
+  return <div>UserViewItems</div>
 }
 
 export default UserViewItems

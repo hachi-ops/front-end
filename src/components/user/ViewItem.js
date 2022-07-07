@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function ViewItem() {
-  return (
-    <div>ViewItem</div>
-  )
+  return <div>ViewItem</div>
 }
 
 export default ViewItem
