@@ -16,6 +16,7 @@ import UsersList from './components/admin/UsersList';
 import UserDetails from './components/admin/UserDetails';
 import AdminProductsList from './components/admin/AdminProductsList';
 import AdminProfile from './components/admin/AdminProfile';
+import ItemsList from './components/admin/ItemsList';
 
 
 function App() {
@@ -43,8 +44,9 @@ function App() {
       <Route path="/users-list" element={<UsersList/>}>
       <Route path=":userId" element={<UserDetails/>}/>
       <Route path="admin-profile" element={<AdminProfile/>}/>
+      
       </Route>
- 
+    <Route path="/items-list" element={<ItemsList/>}/>
       <Route path="*" element={<NoMatch/>} />
       </Routes>       
       {/* <Footer /> */}
