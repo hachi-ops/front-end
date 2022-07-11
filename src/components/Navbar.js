@@ -65,6 +65,11 @@ export default function Navbar() {
                 UserRequestItem
               </NavLink>
             </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/user-profile">
+              UserProfile
+              </NavLink>
+            </li>
             {/* <li><NavLink style={navLinkStyles} to="/admin-login">AdminLogin</NavLink></li> */}
           </ul>
         </nav>
