@@ -11,18 +11,24 @@ import React from "react";
 import RequestSummary from "./components/user/RequestSummary";
 import UserDetails from "./components/admin/UserDetails";
 import UserLogin from "./components/user/UserLogin";
+import UserProfile from "./components/user/UserProfile";
 import UserRequestItem from "./components/user/UserRequestItem";
 import UserSignUp from "./components/user/UserSignUp";
 import UsersList from "./components/admin/UsersList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./components/auth";
 
 // import Footer from './components/Footer';
 // import UserViewItems from './components/UserViewItems';
 
 function App() {
   return (
-    <Router>
+    
+   
+   <Router>
+     <AuthProvider>
       <div className="App">
+
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
@@ -46,10 +52,15 @@ function App() {
           </Route>
           <Route path="/items-list" element={<ItemsList />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/user-profile" element={<UserProfile/>} />
         </Routes>
         {/* <Footer /> */}
+       
       </div>
+      </AuthProvider>
     </Router>
+   
+ 
   )
 }
 
